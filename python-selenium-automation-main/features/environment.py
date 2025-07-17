@@ -1,6 +1,18 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+from app.application import Application
+
+
+
+
+
+def before_all(context):
+    context.driver = webdriver.Chrome()
+    context.driver.maximize_window()
+    context.app = Application(context.driver)
+
+
 
 
 def browser_init(context):
