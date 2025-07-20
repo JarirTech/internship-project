@@ -13,10 +13,7 @@ class OffPlanPage:
 
     def click_off_plan(self):
         wait = WebDriverWait(self.driver, 10)
-        off_plan = wait.until(EC.element_to_be_clickable((
-            By.XPATH,
-            '//*[@id="w-node-_99a5c496-8f77-9959-16dd-e8eb9b22b68b-9b22b68b"]/div[3]/a[2]/div[1]/div[2]'
-        )))
+        off_plan = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="w-node-_99a5c496-8f77-9959-16dd-e8eb9b22b68b-9b22b68b"]/div[3]/a[2]/div[1]/div[2]')))
         off_plan.click()
 
 
